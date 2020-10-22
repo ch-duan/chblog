@@ -1,1 +1,1 @@
-package go
+package mygo
