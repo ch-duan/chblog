@@ -32,7 +32,7 @@ openssl req -x509 -new -nodes -key ca_key.pem -sha256 -days 3650 -subj "/CN=www.
 
 ##### 生成请求
 
-req -new -key server_key.pem -out server.csr -subj "/CN=mq.letsit.vip"
+openssl req -new -key server_key.pem -out server.csr -subj "/CN=mq.letsit.vip"
 
 ##### 签名
 
