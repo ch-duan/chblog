@@ -8,11 +8,11 @@ func SliceTestPointer() {
 	s1 := slice[2:5]
 	s2 := s1[2:6:7]
 
-	fmt.Printf("%p\r\n", s1)
-	fmt.Printf("%p\r\n", s2)
+	fmt.Printf("%p,%v,%v\r\n", s1, len(s1), cap(s1))
 	s2 = append(s2, 100)
+	fmt.Printf("%p,%v,%v\r\n", s2, len(s2), cap(s2))
 	s2 = append(s2, 200)
-	fmt.Printf("%p\r\n", s2)
+	fmt.Printf("%p,%v,%v\r\n", s2, len(s2), cap(s2))
 
 	s1[2] = 20
 
@@ -24,4 +24,11 @@ func SliceTestPointer() {
 func SliceTestLenAndCap() {
 	s := []int{1, 2, 3}
 	fmt.Println(len(s), cap(s))
+}
+
+func SliceTestAppend() {
+	var nums1 []interface{}
+	nums2 := []int{1, 3, 4}
+	num3 := append(nums1, nums2)
+	fmt.Println(num3)
 }
